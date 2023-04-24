@@ -193,3 +193,156 @@ function tavaliReseter() {
 	pishamadBlack = 0;
 	tavaliResult.innerText = "ریست شد";
 }
+
+// hafeze
+
+const hafezeBtn = document.querySelector(".hafeze-btn");
+const hafezeResult = document.querySelector(".hafeze-result");
+
+let level = 1;
+let levelsInfo = {
+	1: {
+		mogheiat: "1",
+		barchasb: "1",
+	},
+	2: {
+		mogheiat: "1",
+		barchasb: "1",
+	},
+	3: {
+		mogheiat: "1",
+		barchasb: "1",
+	},
+	4: {
+		mogheiat: "1",
+		barchasb: "1",
+	},
+};
+
+hafezeBtn.addEventListener("click", hafezeHandler);
+
+function hafezeHandler() {
+	const hafezeNumber = document.getElementById("hafeze-number").value;
+
+	document.getElementById("label").disabled;
+	document.getElementById("label").disabled;
+
+	switch (level) {
+		case 1:
+			if (hafezeNumber == 1 || 2) {
+				hafezeResult.innerText = "موقعیت دوم را فشار دهید";
+				levelsInfo[level].mogheiat = 2;
+				applyInfo(level, "barchasb");
+			}
+			if (hafezeNumber == 3) {
+				hafezeResult.innerText = "موقعیت سوم را فشار دهید";
+				levelsInfo[level].mogheiat = 3;
+				applyInfo(level, "barchasb");
+			}
+			if (hafezeNumber == 3) {
+				hafezeResult.innerText = "موقعیت چهارم را فشار دهید";
+				levelsInfo[level].mogheiat = 4;
+				applyInfo(level, "barchasb");
+			}
+			level++;
+			break;
+		case 2:
+			if (hafezeNumber == 1) {
+				hafezeResult.innerText = "دکمه با برچسب ۴ را فشار دهید";
+				levelsInfo[level].barchasb = 4;
+				applyInfo(level, "mogheiat");
+			}
+			if (hafezeNumber == 2 || 4) {
+				hafezeResult.innerText = `دکمه با موقعیت ${levelsInfo[1].mogheiat} را فشار دهید`;
+				levelsInfo[level].mogheiat = levelsInfo[1].mogheiat;
+				applyInfo(level, "barchasb");
+			}
+			if (hafezeNumber == 3) {
+				hafezeResult.innerText = "موقعیت اول را فشار دهید";
+				levelsInfo[level].mogheiat = 1;
+				applyInfo(level, "barchasb");
+			}
+			level++;
+			break;
+		case 3:
+			if (hafezeNumber == 1) {
+				hafezeResult.innerText = `دکمه با برچسب ${levelsInfo[2].barchasb} را فشار دهید`;
+				levelsInfo[level].barchasb = levelsInfo[2].barchasb;
+				applyInfo(level, "mogheiat");
+			}
+			if (hafezeNumber == 2) {
+				hafezeResult.innerText = `دکمه با برچسب ${levelsInfo[1].barchasb} را فشار دهید`;
+				levelsInfo[level].barchasb = levelsInfo[1].barchasb;
+				applyInfo(level, "mogheiat");
+			}
+			if (hafezeNumber == 3) {
+				hafezeResult.innerText = "موقعیت سوم را فشار دهید";
+				levelsInfo[level].mogheiat = 3;
+				applyInfo(level, "barchasb");
+			}
+			if (hafezeNumber == 4) {
+				hafezeResult.innerText = "دکمه با برچسب ۴ را فشار دهید";
+				levelsInfo[level].barchasb = 4;
+				applyInfo(level, "mogheiat");
+			}
+			level++;
+			break;
+		case 4:
+			if (hafezeNumber == 1) {
+				hafezeResult.innerText = `دکمه با موقعیت ${levelsInfo[1].mogheiat} را فشار دهید`;
+				levelsInfo[level].mogheiat = levelsInfo[1].mogheiat;
+				applyInfo(level, "barchasb");
+			}
+			if (hafezeNumber == 2) {
+				hafezeResult.innerText = "موقعیت اول را فشار دهید";
+				levelsInfo[level].mogheiat = 1;
+				applyInfo(level, "barchasb");
+			}
+			if (hafezeNumber == 3 || 4) {
+				hafezeResult.innerText = `دکمه با موقعیت ${levelsInfo[2].mogheiat} را فشار دهید`;
+				levelsInfo[level].mogheiat = levelsInfo[2].mogheiat;
+				applyInfo(level, "barchasb");
+			}
+			level++;
+			break;
+		case 5:
+			if (hafezeNumber == 1) {
+				hafezeResult.innerText = `دکمه با برچسب ${levelsInfo[1].barchasb} را فشار دهید`;
+			}
+			if (hafezeNumber == 2) {
+				hafezeResult.innerText = `دکمه با برچسب ${levelsInfo[2].barchasb} را فشار دهید`;
+			}
+			if (hafezeNumber == 3) {
+				hafezeResult.innerText = `دکمه با برچسب ${levelsInfo[4].barchasb} را فشار دهید`;
+			}
+			if (hafezeNumber == 4) {
+				hafezeResult.innerText = `دکمه با برچسب ${levelsInfo[3].barchasb} را فشار دهید`;
+			}
+			break;
+		default:
+			break;
+	}
+}
+
+function applyInfo(level, item) {
+	if (item === "barchasb") {
+		const labelInput = document.getElementById("label");
+		labelInput.disabled = false;
+		labelInput.value = "";
+		labelInput.addEventListener("change", () => {
+			levelsInfo[level].barchasb = labelInput.value;
+		});
+	}
+	if (item === "mogheiat") {
+		const positionInput = document.getElementById("position");
+		positionInput.disabled = false;
+		positionInput.value = "";
+		positionInput.addEventListener("change", () => {
+			levelsInfo[level].mogheiat = labelInput.value;
+		});
+	}
+}
+
+document.querySelector(".hafeze-rst").addEventListener("click", () => {
+	level = 1;
+});

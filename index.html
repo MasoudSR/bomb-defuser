@@ -1,42 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bomb Defuser</title>
 </head>
+
 <body>
     <div class="sim-pishrafte">
         سیم پیشرفته
         <br>
-        <input type="checkbox" name="" id="red">red
+        <input type="checkbox" name="" id="red">قرمز
         <br>
-        <input type="checkbox" name="" id="blue">blue
+        <input type="checkbox" name="" id="blue">آبی
         <br>
-        <input type="checkbox" name="" id="star">star
+        <input type="checkbox" name="" id="star">ستاره
         <br>
-        <input type="checkbox" name="" id="led">led
+        <input type="checkbox" name="" id="led">لامپ
         <br>
-        <button class="sim-pishrafte-btn">submit</button>
+        <button class="sim-pishrafte-btn">ثبت</button>
         <span class="result"></span>
-        <hr>       
     </div>
+    <hr>
     <div class="tavali-simha">
         توالی سیم‌ها
         <br>
-        <input type="radio" name="tavali-simha" id="tavali-red">red
-        <input type="radio" name="tavali-simha" id="tavali-blue">blue
-        <input type="radio" name="tavali-simha" id="tavali-black">black
+        <input type="radio" name="tavali-simha" id="tavali-red">قرمز
+        <input type="radio" name="tavali-simha" id="tavali-blue">آبی
+        <input type="radio" name="tavali-simha" id="tavali-black">مشکی
         <br>
         <input type="radio" name="tavali-be" id="a">A
         <input type="radio" name="tavali-be" id="b">B
         <input type="radio" name="tavali-be" id="c">C
         <br>
-        <button class="tavali-btn">submit</button>
-        <button class="tavali-rst">reset</button>
+        <button class="tavali-btn">ثبت</button>
+        <button class="tavali-rst">ریست</button>
         <span class="tavali-result"></span>
+    </div>
+    <hr>
+    <div class="hafeze">
+        <input id="hafeze-number" type="number" min="1" max="4">
+        <button class="hafeze-btn">تایید</button>
+        <div class="hafeze-result"></div>
+
+        <div class="mogheiat">موقعیت:
+            <input type="number" disabled value="1" id="position">
+        </div>
+        <div class="barchasb">برچسب:
+            <input type="number" disabled value="1" id="label">
+        </div>
+        <button class="hafeze-rst">ریست</button>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
