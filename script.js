@@ -224,8 +224,8 @@ hafezeBtn.addEventListener("click", hafezeHandler);
 function hafezeHandler() {
 	const hafezeNumber = document.getElementById("hafeze-number").value;
 
-	document.getElementById("label").disabled;
-	document.getElementById("label").disabled;
+	document.getElementById("label").disabled=true;
+	document.getElementById("label").disabled=true;
 
 	switch (level) {
 		case 1:
@@ -345,4 +345,11 @@ function applyInfo(level, item) {
 
 document.querySelector(".hafeze-rst").addEventListener("click", () => {
 	level = 1;
+		const positionInput = document.getElementById("position");
+		positionInput.disabled = true;
+		positionInput.value = "";
+		const labelInput = document.getElementById("label");
+		labelInput.disabled = true;
+		labelInput.value = "";
+        document.getElementById("hafeze-number").value="";
 });
