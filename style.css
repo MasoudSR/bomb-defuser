@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    user-select: none;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0px 5vw;
+    background-color: rgb(56, 56, 105);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    background-color: aliceblue;
+    border: 1px solid rgb(4, 20, 90);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 2rem;
+    margin: 10px 10px 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.panel {
+    position: fixed;
+    justify-content: center;
+    bottom: 0px;
+}
+
+.panel ul {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    background-color: antiquewhite;
+    border-radius: 20px 20px 0 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 20px;
+    width: 33vw;
+    margin: 10px;
+    transition: all .5s;
+    border-radius: 10px;
+}
+
+li:hover{
+    background-color: aqua;
+}
+
+.wires-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.color-wires-container{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="number"]{
+    width: 4rem;
+    height: 3rem;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.sim-pishrafte,.tavali-simha,.hafeze{
+    background-color: white;
+    border-radius: 2rem;
+    max-height: 110px;
+    overflow: hidden;
+    margin-top: 20px;
+    transition: max-height .5s;
+}
+
+h1{
+    cursor: pointer;
+}
+
+.max{
+    transition: max-height .5s;
+max-height: 1000px;
+}
+

@@ -5,42 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Bomb Defuser</title>
 </head>
 
 <body>
     <div class="sim-pishrafte">
-        سیم پیشرفته
+        <h1>
+            سیم پیشرفته
+        </h1>
+        <label for="red">قرمز</label>
+        <input type="checkbox" name="" id="red">
         <br>
-        <input type="checkbox" name="" id="red">قرمز
+        <label for="blue">آبی</label>
+        <input type="checkbox" name="" id="blue">
         <br>
-        <input type="checkbox" name="" id="blue">آبی
+        <label for="star">ستاره</label>
+        <input type="checkbox" name="" id="star">
         <br>
-        <input type="checkbox" name="" id="star">ستاره
-        <br>
-        <input type="checkbox" name="" id="led">لامپ
+        <label for="led">لامپ</label>
+        <input type="checkbox" name="" id="led">
         <br>
         <button class="sim-pishrafte-btn">ثبت</button>
-        <span class="result"></span>
+        <div class="result"></div>
     </div>
-    <hr>
     <div class="tavali-simha">
-        توالی سیم‌ها
-        <br>
-        <input type="radio" name="tavali-simha" id="tavali-red">قرمز
-        <input type="radio" name="tavali-simha" id="tavali-blue">آبی
-        <input type="radio" name="tavali-simha" id="tavali-black">مشکی
-        <br>
-        <input type="radio" name="tavali-be" id="a">A
-        <input type="radio" name="tavali-be" id="b">B
-        <input type="radio" name="tavali-be" id="c">C
-        <br>
-        <button class="tavali-btn">ثبت</button>
-        <button class="tavali-rst">ریست</button>
-        <span class="tavali-result"></span>
+        <h1>
+            توالی سیم‌ها
+        </h1>
+        <div class="wires-container">
+            <div class="color-wires-container">
+                <div>
+                    <div>
+
+                        <input type="radio" name="tavali-simha" id="tavali-red">
+                        <label for="tavali-red">قرمز</label>
+                    </div>
+
+                </div>
+                <div>
+
+                    <input type="radio" name="tavali-simha" id="tavali-blue">
+                    <label for="tavali-blue">آبی</label>
+                </div>
+                <div>
+
+                    <input type="radio" name="tavali-simha" id="tavali-black">
+                    <label for="tavali-black">مشکی</label>
+                </div>
+            </div>
+            <div class="sockets-container">
+                <div><label for="a">A</label>
+                    <input type="radio" name="tavali-be" id="a">
+                </div>
+                <div><label for="b">B</label>
+                    <input type="radio" name="tavali-be" id="b">
+                </div>
+                <div><label for="c">C</label>
+                    <input type="radio" name="tavali-be" id="c">
+                </div>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button class="tavali-btn">ثبت</button>
+            <button class="tavali-rst">ریست</button>
+            <div class="tavali-result"></div>
+        </div>
     </div>
-    <hr>
     <div class="hafeze">
+        <h1>حافظه</h1>
         <input id="hafeze-number" type="number" min="1" max="4">
         <button class="hafeze-btn">تایید</button>
         <div class="hafeze-result"></div>

@@ -224,8 +224,8 @@ hafezeBtn.addEventListener("click", hafezeHandler);
 function hafezeHandler() {
 	const hafezeNumber = document.getElementById("hafeze-number").value;
 
-	document.getElementById("label").disabled=true;
-	document.getElementById("label").disabled=true;
+	document.getElementById("label").disabled = true;
+	document.getElementById("label").disabled = true;
 
 	switch (level) {
 		case 1:
@@ -345,11 +345,31 @@ function applyInfo(level, item) {
 
 document.querySelector(".hafeze-rst").addEventListener("click", () => {
 	level = 1;
-		const positionInput = document.getElementById("position");
-		positionInput.disabled = true;
-		positionInput.value = "";
-		const labelInput = document.getElementById("label");
-		labelInput.disabled = true;
-		labelInput.value = "";
-        document.getElementById("hafeze-number").value="";
+	const positionInput = document.getElementById("position");
+	positionInput.disabled = true;
+	positionInput.value = "";
+	const labelInput = document.getElementById("label");
+	labelInput.disabled = true;
+	labelInput.value = "";
+	document.getElementById("hafeze-number").value = "";
 });
+
+
+document.querySelector(".sim-pishrafte h1").addEventListener("click",()=>{
+    document.querySelector(".sim-pishrafte").classList.toggle("max")
+    document.querySelector(".tavali-simha").classList.remove("max")
+    document.querySelector(".hafeze").classList.remove("max")
+})
+
+document.querySelector(".tavali-simha h1").addEventListener("click",()=>{
+    document.querySelector(".tavali-simha").classList.toggle("max")
+    document.querySelector(".sim-pishrafte").classList.remove("max")
+    document.querySelector(".hafeze").classList.remove("max")
+
+})
+
+document.querySelector(".hafeze h1").addEventListener("click",()=>{
+    document.querySelector(".hafeze").classList.toggle("max")
+    document.querySelector(".sim-pishrafte").classList.remove("max")
+    document.querySelector(".tavali-simha").classList.remove("max")
+})
