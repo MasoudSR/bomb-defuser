@@ -354,22 +354,20 @@ document.querySelector(".hafeze-rst").addEventListener("click", () => {
 	document.getElementById("hafeze-number").value = "";
 });
 
+document.querySelector(".sim-pishrafte h1").addEventListener("click", () => {
+	document.querySelector(".sim-pishrafte").classList.toggle("max");
+	document.querySelector(".tavali-simha").classList.remove("max");
+	document.querySelector(".hafeze").classList.remove("max");
+});
 
-document.querySelector(".sim-pishrafte h1").addEventListener("click",()=>{
-    document.querySelector(".sim-pishrafte").classList.toggle("max")
-    document.querySelector(".tavali-simha").classList.remove("max")
-    document.querySelector(".hafeze").classList.remove("max")
-})
+document.querySelector(".tavali-simha h1").addEventListener("click", () => {
+	document.querySelector(".tavali-simha").classList.toggle("max");
+	document.querySelector(".sim-pishrafte").classList.remove("max");
+	document.querySelector(".hafeze").classList.remove("max");
+});
 
-document.querySelector(".tavali-simha h1").addEventListener("click",()=>{
-    document.querySelector(".tavali-simha").classList.toggle("max")
-    document.querySelector(".sim-pishrafte").classList.remove("max")
-    document.querySelector(".hafeze").classList.remove("max")
-
-})
-
-document.querySelector(".hafeze h1").addEventListener("click",()=>{
-    document.querySelector(".hafeze").classList.toggle("max")
-    document.querySelector(".sim-pishrafte").classList.remove("max")
-    document.querySelector(".tavali-simha").classList.remove("max")
-})
+document.querySelector(".hafeze h1").addEventListener("click", () => {
+	document.querySelector(".hafeze").classList.toggle("max");
+	document.querySelector(".sim-pishrafte").classList.remove("max");
+	document.querySelector(".tavali-simha").classList.remove("max");
+});

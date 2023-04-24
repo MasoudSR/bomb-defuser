@@ -58,29 +58,31 @@ li {
     border-radius: 10px;
 }
 
-li:hover{
+li:hover {
     background-color: aqua;
 }
 
-.wires-container{
+.wires-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
 }
 
-.color-wires-container{
+.color-wires-container {
     display: flex;
     flex-direction: column;
 }
 
-input[type="number"]{
+input[type="number"] {
     width: 4rem;
     height: 3rem;
     font-weight: bolder;
     font-size: 20px;
 }
 
-.sim-pishrafte,.tavali-simha,.hafeze{
+.sim-pishrafte,
+.tavali-simha,
+.hafeze {
     background-color: white;
     border-radius: 2rem;
     max-height: 110px;
@@ -89,12 +91,15 @@ input[type="number"]{
     transition: max-height .5s;
 }
 
-h1{
+h1 {
     cursor: pointer;
 }
 
-.max{
+.max {
     transition: max-height .5s;
-max-height: 1000px;
+    max-height: 1000px;
 }
 
+.logo img{
+    width: 100%;
+}
