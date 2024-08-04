@@ -11,6 +11,8 @@ body {
     padding: 0px 5vw;
     background-color: rgb(56, 56, 105);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 1024px;
+    margin: auto;
 }
 
 h1 {
